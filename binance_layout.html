@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Learning CSS Grid</title>
+    <link rel='stylesheet' href="styles.css" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="m-auto container grid grid-cols-[20%,60%,20%]">
+        <div class="bg-green-900 col-span-2">block 1</div>
+        <div class="bg-red-900">block 2</div>
+        <div class="bg-yellow-900 row-start-2 row-end-4">block 3</div>
+        <div class="bg-blue-900 row-span-2">block 4</div>
+        <div class="bg-teal-900">block 5</div>
+        <div class="bg-sky-900">block 6</div>
+        <div class="bg-sky-900">block 6</div>
+        <div class="bg-sky-900">block 6</div>
+    </div>
+</body>
+
+</html>

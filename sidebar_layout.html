@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Learning CSS Grid</title>
+    <link rel='stylesheet' href="styles.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="w-full min-h-screen grid grid-cols-[22rem,1fr]">
+        <div class="sidebar bg-[#222831]">
+            Sidebar
+        </div>
+        <div class="main bg-[#31363F] grid grid-rows-[auto,1fr,auto]">
+            <div class="h-14">Header</div>
+
+            <div class="mx-auto container">
+                <div class="menu mx-auto rounded-lg w-[30rem] mx-16 px-8 bg-white 
+                    [&>.item]:pb-5 [&>.icon]:text-5xl [&>.icon]:pl-4 
+                    [&>.item>h3]:font-bold [&>.item>h3]:text-xl [&>.item>p]:mt-1 grid grid-cols-[1fr,auto]">
+
+                    <div class="item">
+                        <h3>Veg Burger</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit atque hic eligendi</p>
+                    </div>
+                    <span class="icon"> 🍔 </span>
+                    <div class="item">
+                        <h3>Tacos</h3>
+                        <p>Quos sunt non labore ab dicta ea sequi error, sapiente asperiores quas.</p>
+                    </div>
+                    <span class="icon"> 🌮 </span>
+                    <div class="item">
+                        <h3>Classic Waffles</h3>
+                        <p>Dolorem nesciunt minima reprehenderit natus nam ipsum ipsa, laudantium.</p>
+                    </div>
+                    <span class="icon"> 🧇 </span>
+                </div>
+
+                <div class="my-12 mx-auto max-w-4xl min-w-[45rem]">
+                    <div class="max-w-none w-auto grid grid-cols-[minmax(auto,30rem)]   sm:grid-cols-[repeat(3,minmax(auto,20rem))]  justify-center gap-8">
+                        <div class="plan bg-white p-8 rounded-lg shadow-md">
+                            <h2 class="font-bold text-2xl">Standard</h2>
+                            <span class="text-sm opacity-80">Monthly Plan</span>
+                            <p class="font-bold text-4xl mt-5">$25</p>
+                        </div>
+                        <div class="plan bg-pink-600 text-whitebg-white p-8 rounded-lg shadow-md order-first sm:order-none">
+                            <h2 class="font-bold text-2xl">Popular</h2>
+                            <span class="text-sm opacity-80">Monthly Plan</span>
+                            <p class="font-bold text-4xl mt-5">$40</p>
+                        </div>
+                        <div class="plan bg-white p-8 rounded-lg shadow-md">
+                            <h2 class="font-bold text-2xl">Premium</h2>
+                            <span class="text-sm opacity-80">Monthly Plan</span>
+                            <p class="font-bold text-4xl mt-5">$55</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="max-w-7xl mx-auto p-8 grid grid-cols-[repeat(auto-fit,minmax(16rem,1fr))] gap-8 ">
+                    <div class="bg-white rounded-lg">
+                        <img class="w-full h-48 object-cover rounded-t-lg" src="https://picsum.photos/400/300" alt="" />
+                        <div class="p-6">
+                            <h2 class="font-bold text-2xl">Blog title 1</h2>
+                            <p class="mt-4 mb-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo
+                                assumenda porro inventore
+                                repellendus ipsum.</p>
+                            <a class="text-lg font-bold text-purple-600" href="#">Read more</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg">
+                        <img class="w-full h-48 object-cover rounded-t-lg" src="https://picsum.photos/400/300?1"
+                            alt="" />
+                        <div class="p-6">
+                            <h2 class="font-bold text-2xl">Blog title 2</h2>
+                            <p class="mt-4 mb-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo
+                                assumenda porro inventore
+                                repellendus ipsum.</p>
+                            <a class="text-lg font-bold text-purple-600" href="#">Read more</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg">
+                        <img class="w-full h-48 object-cover rounded-t-lg" src="https://picsum.photos/400/300?2"
+                            alt="" />
+                        <div class="desc p-6">
+                            <h2 class="font-bold text-2xl">Blog title 3</h2>
+                            <p class="mt-4 mb-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo
+                                assumenda porro inventore
+                                repellendus ipsum.</p>
+                            <a class="text-lg font-bold text-purple-600" href="#">Read more</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg">
+                        <img class="w-full h-48 object-cover rounded-t-lg" src="https://picsum.photos/400/300?3"
+                            alt="" />
+                        <div class="desc p-6">
+                            <h2 class="font-bold text-2xl">Blog title 4</h2>
+                            <p class="mt-4 mb-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo
+                                assumenda porro inventore
+                                repellendus ipsum.</p>
+                            <a class="text-lg font-bold text-purple-600" href="#">Read more</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg">
+                        <img class="w-full h-48 object-cover rounded-t-lg" src="https://picsum.photos/400/300?4"
+                            alt="" />
+                        <div class="desc p-6">
+                            <h2 class="font-bold text-2xl">Blog title 5</h2>
+                            <p class="mt-4 mb-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo
+                                assumenda porro inventore
+                                repellendus ipsum.</p>
+                            <a class="text-lg font-bold text-purple-600" href="#">Read more</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg">
+                        <img class="w-full h-48 object-cover rounded-t-lg" src="https://picsum.photos/400/300?5"
+                            alt="" />
+                        <div class="desc p-6">
+                            <h2 class="font-bold text-2xl">Blog title 6</h2>
+                            <p class="mt-4 mb-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo
+                                assumenda porro inventore
+                                repellendus ipsum.</p>
+                            <a class="text-lg font-bold text-purple-600" href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="my-24 h-72 bg-white px-5 rounded-[1.2rem] grid grid-cols-[repeat(4,auto)] gap-12 justify-between justify-items-center content-center items-center">
+                    <img src="https://res.cloudinary.com/thirus/image/upload/v1634556259/logos/logoipsum-5_wqq52e.svg"
+                        alt="" />
+                    <img src="https://res.cloudinary.com/thirus/image/upload/v1634556262/logos/logoipsum-8_euk84k.svg"
+                        alt="" />
+                    <img src="https://res.cloudinary.com/thirus/image/upload/v1634556259/logos/logoipsum-6_jie3be.svg"
+                        alt="" />
+                    <img src="https://res.cloudinary.com/thirus/image/upload/v1634556262/logos/logoipsum-9_hqrvx7.svg"
+                        alt="" />
+                    <img src="https://res.cloudinary.com/thirus/image/upload/v1634564578/logos/logoipsum-13_zvuric.svg"
+                        alt="" />
+                    <img src="https://res.cloudinary.com/thirus/image/upload/v1634556261/logos/logoipsum-7_vuiq6n.svg"
+                        alt="" />
+                    <img src="https://res.cloudinary.com/thirus/image/upload/v1634564391/logos/logoipsum-11_bhrqq2.svg"
+                        alt="" />
+                    <img src="https://res.cloudinary.com/thirus/image/upload/v1634556262/logos/logoipsum-10_pbu8et.svg"
+                        alt="" />
+                </div>
+
+                <div
+                    class="card h-96 my-24 w-80 bg-white m-8 p-8 rounded-md grid content-between justify-items-center text-center">
+                    <img class="w-20 h-20 object-cover rounded-full"
+                        src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=80"
+                        alt="" />
+                    <p><strong>Matt Cooper</strong> is a graphic designer at CircleAi. Lorem ipsum dolor sit amet
+                        consectetur
+                        adipisicing elit.</p>
+                    <a class="font-bold text-teal-700" href="#">View Profile</a>
+                </div>
+
+                <section class="my-24 max-w-none w-auto p-12 min-h-screen grid grid-cols-2 gap-16 items-center">
+                    <img src="https://res.cloudinary.com/thirus/image/upload/v1634585194/images/details-1_e7ojp9.svg"
+                        alt="" />
+                    <div>
+                        <h1 class="text-4xl leading-tight">
+                            Perfect solution<br />
+                            <strong>for your small business</strong>
+                        </h1>
+                        <p class="mt-4">Maecenas fringilla quam posuere, pellentesque est nec, gravida turpis. Integer
+                            vitae mollis felis. Integer id quam id tellus hendrerit laciniad binfer</p>
+                        <p class="mt-4">Sed id dui rutrum, dictum urna eu, accumsan turpis. Fusce id auctor velit, sed
+                            viverra dui rem dina</p>
+                        <button
+                            class="inline-block mt-4 py-3 px-9 bg-red-500 text-white font-bold rounded-full">Modal</button>
+                    </div>
+                </section>
+
+                <form
+                    class="max-w-lg my-24 mx-auto p-8 border border-gray-300 grid grid-cols-[auto,1fr] items-center gap-y-6 gap-x-12">
+                    <label> Full Name </label>
+                    <input class="py-2 px-3 border border-gray-300 rounded" type="text" name="name"
+                        placeholder="Full Name" />
+                    <label> Email Address </label>
+                    <input class="py-2 px-3 border border-gray-300 rounded" type="email" name="email"
+                        placeholder="Email Address" />
+                    <button class="inline-block mt-4 py-3 px-9 bg-red-500 text-white font-bold rounded-full col-start-2"
+                        type="submit">Create Account</button>
+                </form>
+
+                <div class="my-24 max-w-2xl mx-auto container grid sm:grid-cols-2 [&>div]:p-10">
+                    <div class="component-header bg-white text-gray-500 sm:col-start-1 sm:col-end-3">
+                        <h2 class="font-bold text-3xl text-teal-600">Join our community</h2>
+                        <h3 class="text-[#c0df34] my-4">30-day, hassle-free money back guarantee</h3>
+                        <p class="mt-1">Gain access to our full library of tutorials along with expert code reviews.
+                            Perfect for any
+                            developers who are serious about honing their skills.</p>
+                    </div>
+                    <div class="subscription bg-teal-500 text-white">
+                        <h3 class="font-bold text-xl">Monthly Subscription</h3>
+                        <span class="price inline-block mt-2.5 align-middle font-bold text-4xl">$29</span>
+                        <span class="per inline-block mt-2.5 align-middle pl-3">per month</span>
+                        <p class="mt-1">Full access for less than $1 a day</p>
+                        <a href="#" id="sign-up"
+                            class="mt-6 block py-3 px-6 text-center bg-teal-900 rounded font-bold">Sign Up</a>
+                    </div>
+                    <div class="why bg-teal-500 text-white">
+                        <h3 class="font-bold text-xl">Why Us</h3>
+                        <ul class="mt-3 text-sm">
+                            <li>Tutorials by industry experts</li>
+                            <li>Peer & expert code review</li>
+                            <li>Coding exercises</li>
+                            <li>Access to our GitHub repos</li>
+                            <li>Community forum</li>
+                            <li>Flashcard decks</li>
+                            <li>New videos every week</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <section class="max-w-6xl mx-auto my-24 grid sm:grid-cols-2 md:grid-cols-3 gap-x-8 [&_p]:mt-1">
+                    <img class="w-full max-w-md m-auto sm:row-start-1 sm:row-end-3 md:row-end-2 md:col-start-2"
+                        src="https://res.cloudinary.com/thirus/image/upload/v1635003545/images/mobile-ux_yc0c3w.png"
+                        alt="">
+                    <div class="md:col-start-1 md:text-right">
+                        <h3 class="font-bold text-xl mt-4 text-blue-800">List Building</h3>
+                        <p>It's very easy to start creating email lists for your marketing actions, give it a try</p>
+                        <h3 class="font-bold text-xl mt-4 text-blue-800">Campaign Tracker</h3>
+                        <p>Campaigns is a feature we've created since the beginning and it's at the core of Lomar</p>
+                        <h3 class="font-bold text-xl mt-4 text-blue-800">Analytics Tool</h3>
+                        <p>Lomar collects all the necessary data to help you analyse different situations</p>
+                    </div>
+                    <div class="sm:col-start-2 md:col-start-3">
+                        <h3 class="font-bold text-xl mt-4 text-blue-800">Admin Control</h3>
+                        <p>Rights of users and admins can easily be managed through the control panel</p>
+                        <h3 class="font-bold text-xl mt-4 text-blue-800">Integration Setup</h3>
+                        <p>We're providing a step-by-step integration session to implement automation</p>
+                        <h3 class="font-bold text-xl mt-4 text-blue-800">Help Line Support</h3>
+                        <p>Quality support is our top priority so please contact us for any problem you encounter</p>
+                    </div>
+                </section>
+
+
+                <section class="mx-auto my-24 grid lg:grid-cols-4 gap-8">
+                    <div class="bg-indigo-950 text-white p-8 rounded-lg lg:col-span-2">
+                        <h3 class="font-bold text-2xl">
+                            I received a job offer mid-course, and the subjects I learned were current, if not more so,
+                            in the company I joined. I honestly feel I got every penny’s worth.
+                        </h3>
+                        <p class="mt-4 opacity-70">
+                            “I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a
+                            transition and have heard some people who had an amazing experience here. I signed up for
+                            the free intro course and found it incredibly fun! I enrolled shortly thereafter. The next
+                            12 weeks was the best - and most grueling - time of my life. Since completing the course,
+                            I’ve successfully switched careers, working as a Software Engineer at a VR startup.”
+                        </p>
+                    </div>
+                    <div class="bg-gray-950 text-white p-8 rounded-lg">
+                        <h3 class="font-bold text-2xl">
+                            The team was very supportive and kept me motivated
+                        </h3>
+                        <p class="mt-4 opacity-70">
+                            “I started as a total newbie with virtually no coding skills. I now work as a mobile
+                            engineer for a big company. This was one of the best investments I’ve made in myself.”
+                        </p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg lg:row-start-2">
+                        <h3 class="font-bold text-2xl">
+                            An overall wonderful and rewarding experience
+                        </h3>
+                        <p class="mt-4 opacity-70">
+                            “Thank you for the wonderful experience! I now have a job I really enjoy, and make a good
+                            living while doing something I love.”
+                        </p>
+                    </div>
+                    <div class="bg-yellow-900 p-8 rounded-lg lg:col-span-2">
+                        <h3 class="font-bold text-2xl">
+                            Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from
+                            them and learning from their experiences was easy.
+                        </h3>
+                        <p class="mt-4 opacity-70">
+                            “The staff seem genuinely concerned about my progress which I find really refreshing. The
+                            program gave me the confidence necessary to be able to go out in the world and present
+                            myself as a capable junior developer. The standard is above the rest. You will get the
+                            personal attention you need from an incredible community of smart and amazing people.”
+                        </p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg lg:row-start-1 lg:row-span-2 lg:col-start-4">
+                        <h3 class="font-bold text-2xl">
+                            Such a life-changing experience. Highly recommended!
+                        </h3>
+                        <p class="mt-4 opacity-70">
+                            “Before joining the bootcamp, I’ve never written a line of code. I needed some structure
+                            from professionals who can help me learn programming step by step. I was encouraged to
+                            enroll by a former student of theirs who can only say wonderful things about the program.
+                            The entire curriculum and staff did not disappoint. They were very hands-on and I never had
+                            to wait long for assistance. The agile team project, in particular, was outstanding. It took
+                            my learning to the next level in a way that no tutorial could ever have. In fact, I’ve often
+                            referred to it during interviews as an example of my developent experience. It certainly
+                            helped me land a job as a full-stack developer after receiving multiple offers. 100%
+                            recommend!”
+                        </p>
+                    </div>
+                </section>
+
+                <section class="my-24 grid grid-cols-[minmax(0,1fr),16rem] p-8">
+                    <div class="main">
+                      <h1 class="font-bold text-3xl">Blog Post Title</h1>
+                      <p class="mt-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut repellat voluptas numquam, est quia recusandae maiores quasi, cumque in vero dolor nisi accusantium nobis unde blanditiis. Nemo vero eius saepe!</p>
+                      <p class="mt-4">Quis saepe exercitationem neque repellendus error incidunt tempora ducimus accusantium recusandae quaerat quia, nostrum natus illum. Velit ducimus quibusdam iusto aspernatur odit.</p>
+                      <pre class="max-w-full overflow-scroll my-6 p-4 bg-gray-100 text-sm">
+                  /* A very long comment here that should create a horizontal scrollbar when max width is reached, but doesn't. */
+                  
+                  .section {
+                    display: grid;
+                  }
+                  </pre>
+                      <p class="mt-4">Nam reprehenderit voluptates perferendis impedit, perspiciatis quis, mollitia corporis debitis atque aliquid, aspernatur rerum natus ullam hic necessitatibus quae deleniti esse blanditiis.</p>
+                    </div>
+                    <div class="sidebar p-8 bg-gray-200 border border-l-gray-300">
+                      <h1 class="font-bold text-3xl">Heading 1</h1>
+                      <ul class="p-4 leading-relaxed">
+                        <li>Link 1</li>
+                        <li>Link 2</li>
+                        <li>Link 3</li>
+                      </ul>
+                    </div>
+                  </section>
+
+            </div>
+
+            <footer class="w-full text-center bg-gray-950 h-28">Sticky Footer 2024</footer>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
